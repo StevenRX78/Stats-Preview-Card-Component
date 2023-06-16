@@ -1,0 +1,116 @@
+@import url(https://fonts.google.com/specimen/Inter:wght@400;700);
+@import url(https://fonts.google.com/specimen/Lexend+Deca:wght@400);
+
+:root {
+  --very-dark-blue-main-background: hsl(233, 47%, 7%);
+  --dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+  --soft-violet-accent: hsl(277, 64%, 61%);
+
+  --white-main-heading-stats: hsl(0, 0%, 100%);
+  --slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white-stat-heading: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+.statistics {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(233, 47%, 7%);
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 70vw;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 7px;
+  display: flex;
+}
+
+.card .description {
+  width: 50%;
+  padding: 4rem;
+}
+
+.card .description h1 {
+  font-size: 2rem;
+}
+
+.card .description h1 span {
+  color: hsl(277, 64%, 61%);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card .description p {
+  color: hsla(0, 0%, 100%, 0.75);
+  margin: 1.5rem 0 3rem 0;
+}
+
+.card .statistics {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .statistics .number {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.card .statistics .name {
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.card .card-image {
+  width: 50%;
+  border-radius: 0 7px 7px 0;
+  background: linear-gradient(
+    0deg,
+    hsla(277, 64%, 61%, 0.5) 0%,
+    hsla(277, 64%, 61%, 0.5) 100%
+  ),
+    url(./images/image-header-desktop.jpg) center no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 375px) {
+    .card {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        width: 90vw;
+        height: 90vh;
+    }
+    .card .description {
+        width: auto;
+        height: 70%;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    .card .statistics {
+        flex-direction: column;
+    }
+    .card .statistics .companies, .card .statistics .templates {
+        margin-bottom: 2rem;
+    }
+    .card .card-image {
+        height: 30%;
+        width: 100%;
+        border-radius: 7px 7px  0 0;
+    }
+}
